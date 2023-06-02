@@ -1,0 +1,119 @@
+* {
+    font-family: JetBrainsMono, monospace;
+    color: #d4d4d4;
+}
+.red-accent {
+    color: #E63946;
+}
+.main-p {
+    text-align: center;
+}
+body {
+    background-color: #1E1E1E;
+}
+body::after {
+    position: absolute;
+    width: 0rem;
+    height: 0rem;
+    overflow: hidden;
+    z-index: -1;
+    content: url(../media/img/img_github_hovered.png) url(../media/img/img_linkedin_hovered.png);
+}
+a {
+    cursor: pointer;
+}
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+h2 {
+    font-size: 2.25rem;
+    text-align: center;
+}
+h4 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+h5 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+p {
+    font-size: rem;
+}
+main {
+    margin: 5rem 5rem;
+}
+/* ---------------HEADER----------------- */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3.75rem;
+    font-size: 1.3rem;
+    text-align: center;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+.header .header-name {
+    /* background-color: aquamarine; */
+    flex-basis: 20%;
+    text-align: left;
+    margin-left: 2.5rem;
+}
+.header .header-name p {
+    font-size: 1.3rem;
+}
+.header .header-menu {
+    /* background-color: coral; */
+    flex-basis: 60%;
+    width: fit-content;
+}
+.header .header-menu ul {
+    list-style: none;
+}
+.header .header-menu ul li {
+    display: inline;
+}
+.header .header-menu ul li a {
+    padding: 0px 10px;
+}
+.header .header-menu ul li a:hover {
+    color: #E63946;
+}
+.header .header-socials {
+    /* background-color:darkcyan; */
+    flex-basis: 20%;
+    margin-right: 2.5rem;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    column-gap: 5px;
+    justify-content: flex-end;
+}
+.header-socials-linkedin {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url(../media/img/img_linkedin.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header-socials-linkedin:hover {
+    background-image: url(../media/img/img_linkedin_hovered.png);
+}
+.header-socials-github {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url(../media/img/img_github.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header-socials-github:hover {
+    background-image: url(../media/img/img_github_hovered.png);
+}
+/* -------------------------------------- */
