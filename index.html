@@ -1,54 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Luke Willis</title>
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/fonts.css">
-    </head>
-    <body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Luke Willis</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/fonts.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="header-name">
+				<p>luke.<span class="red-accent">willis</span></p>
+			</div>
+			<nav class="header-menu">
+				<ul>
+					<li><a href="index.html">home</a></li>
+					<li><a href="#">showreel</a></li>
+					<li><a href="#">projects</a></li>
+					<li><a href="#">about me</a></li>
+					<li><a href="#">contact</a></li>
+				</ul>
+			</nav>
+			<div class="header-socials">
+				<a
+					href="https://www.linkedin.com/in/luke-willis-251492114/"
+					target="_blank"
+					><div class="header-socials-linkedin"></div
+				></a>
+				<a href="https://github.com/LukeWDev?tab=repositories" target="_blank"
+					><div class="header-socials-github"></div
+				></a>
+			</div>
+	
+		</header>
 
-        <header class="header">
-            <div class="header-name">
-                <p>luke.<span class="red-accent">willis</span></p>
-            </div>
-            <nav class="header-menu">
-                <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="#">showreel</a></li>
-                    <li><a href="#">projects</a></li>
-                    <li><a href="#">tools</a></li>
-                    <li><a href="#">contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-socials">
-                <a href="https://www.linkedin.com/in/luke-willis-251492114/" target="_blank"><div class="header-socials-linkedin"></div></a>
-                <a href="https://github.com/LukeWDev?tab=repositories" target="_blank"><div class="header-socials-github"></div></a>
-            </div>
-        </header>
+		<main>
+			<!-- Hero Section -->
+			<section class="section-hero">
+				<h1 class="section-hero-name">
+					luke.<span class="red-accent">willis</span>
+				</h1>
+				<div class="section-hero-line"></div>
+				<h2 class="section-hero-role">
+					technical.<span class="red-accent">sound.designer</span>
+				</h2>
+				<p class="section-hero-description">
+					Based in Leeds, UK, with 3+ years experience in the gaming industry
+					working on multiple genres of games, in different game engines, with different development teams.
+					Currently working at Pitstop Productions.
+				</p>
+				<div class="hero-about">
+					<div class="self-img-border">
+						<img class="self-img" src="media/img/img_luke.png" alt="luke">
+					</div>
+					<div class="hero-skills">
+						<p>Wwise</p>
+						<div class="skill-bar">
+							<div class="skill-bar-fill skill-wwise"></div>
+						</div>
+						<p>C++</p>
+						<div class="skill-bar">
+							<div class="skill-bar-fill skill-cpp"></div>
+						</div>
+						<p>Lua</p>
+						<div class="skill-bar">
+							<div class="skill-bar-fill skill-lua"></div>
+						</div>
+						<p>Python</p>
+						<div class="skill-bar">
+							<div class="skill-bar-fill skill-py"></div>
+						</div>
+						<p>Perforce</p>
+						<div class="skill-bar">
+							<div class="skill-bar-fill skill-p4"></div>
+						</div>
+						<p>Git</p>
+						<div class="skill-bar">
+							<div class="skill-bar-fill skill-git"></div>
+						</div>
+						<p>Jira</p>
+						<div class="skill-bar">
+							<div class="skill-bar-fill skill-jira"></div>
+						</div>
+						<p>Unreal Engine Blueprints</p>
+						<div class="skill-bar">
+							<div class="skill-bar-fill skill-ue"></div>
+						</div>
+					</div>
+				</div>
+										
+			</section>
 
-        <main>
-            <div class="section-title">
-                <h1>luke.<span class="red-accent">willis</span></h1>
-                <h2>technical.<span class="red-accent">sound.designer</span></h2>
-                <p class="main-p">Based in Leeds, UK, with 3+ years experience in the gaming industry working on multiple genres of games with different developers. Currently working at Pitstop Productions.</p>
-            </div>
+			<!-- Showreel Section -->
+			<section class="section-showreel">
 
-            <div class="section-showreel">
+				<div class="hero-showreel-container">
+					<h2 class="section-title">showreel</h2>
+					<video class="hero-showreel" src="media/vid/vid_placeholder.mp4" width="900" controls></video>
+				</div>
 
-            </div>
+			</section>
 
-            <div class="section-projects">
+			<!-- Projects Section -->
+			<section class="section-projects">
+				<h2 class="section-title">projects</h2>
+				<div class="section-projects-group">
+					<div class="section-projects-group-item"> <!--Horizon: Call of the Mountain-->
+						<img
+							class="section-projects-group-item-img"
+							src="media/img/img_horizon.jpg"
+							alt="horizon: call of the mountain"
+						/>
+						<div class="section-projects-group-item-info2">
+							<div>
+								<p class="project-title">Horizon: Call of the Mountain</p>
+								<p class="project-dev">Firesprite + Guerrilla Games</p>
+								<p class="project-role">Senior Technical Sound Designer</p>
+								<p class="project-info">Building on the well established sonic universe of Horizon in a whole new perspective. 
+									By harnessing cutting-edge technology as the lead title for the highly anticipated Playstation VR2 launch, 
+									this project showcases the mastery in expanding the boundaries of audio design within the Horizon universe.
+									<br>
+									<br>
+									Key responsibilities included system design for <span class="red-accent-bold">Music</span>, 
+									<span class="red-accent-bold">Haptics</span>, and <span class="red-accent-bold">Ambience</span>;
+									as well as <span class="red-accent-bold">Optimisation</span>, <span class="red-accent-bold">Bug Fixing</span> 
+									and <span class="red-accent-bold">Supervising</span> technical implementation amongst the team.
+							</div>
+							<div class="platform-icon-container">
+								<span class="playstation">PS.VR2</span> 
+							</div>
+						</div>
+					</div>
+					<div class="section-projects-group-item"> <!--Returnal Ascension-->
+						<img
+							class="section-projects-group-item-img"
+							src="media/img/img_returnal.png"
+							alt="returnal ascension"
+						/>
+						<div class="section-projects-group-item-info2">
+							<div>
+								<p class="project-title">Returnal Ascension</p>
+								<p class="project-dev">Housemarque</p>
+								<p class="project-role">Additional Audio Design</p>
+								<p class="project-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+									Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+									<br>
+									<br>
+									Responsibilities included extra <span class="red-accent-bold">Ambisonic</span> design, and <span class="red-accent-bold">Ambient Spot</span>
+									design for various environments.
+									
+							</div>
+							<div class="platform-icon-container">
+								<span class="playstation">PS5</span> 
+								<img class="platform-icon" src="/media/img/img_steam.png" alt="steam">
+							</div>
+						</div>
+					</div>
+					<div class="section-projects-group-item"> <!--Little Orpheus-->
+						<img
+							class="section-projects-group-item-img"
+							src="media/img/img_orpheus.jpg"
+							alt="little orpheus"
+						/>
+						<div class="section-projects-group-item-info2">
+							<div>
+								<p class="project-title">Little Orpheus</p>
+								<p class="project-dev">The Chinese Room</p>
+								<p class="project-role">Additional Technical Audio Design</p>
+								<p class="project-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+									Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+									<br>
+									<br>
+									Responsibilities included extra <span class="red-accent-bold">Ambisonic</span> design, and <span class="red-accent-bold">Ambient Spot</span>
+									design for various environments.
+									
+							</div>
+							<div class="platform-icon-container">
+								<img class="platform-icon" src="media/img/img_steam.png" alt="pc">
+								<span class="playstation">PS5</span> 
+								<span class="playstation">PS4</span> 
+								<span class="xbox">Xbox One</span> 
+								<span class="xbox">Xbox Series X/S</span> 
+								<img class="platform-icon" src="media/img/img_switch.png" alt="switch">
+							</div>
+						</div>
+					</div>
+					<div class="section-projects-group-item"> <!--Beyond a Steel Sky-->
+						<img
+							class="section-projects-group-item-img"
+							src="media/img/img_bass.jpg"
+							alt="beyond a steel sky"
+						/>
+						<div class="section-projects-group-item-info2">
+							<div>
+								<p class="project-title">Beyond a Steel Sky</p>
+								<p class="project-dev">Revolution Software</p>
+								<p class="project-role">Junior Technical Sound Designer</p>
+								<p class="project-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+									Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+									<br>
+									<br>
+									Responsibilities included extra <span class="red-accent-bold">Ambisonic</span> design, and <span class="red-accent-bold">Ambient Spot</span>
+									design for various environments.
+									
+							</div>
+							<div class="platform-icon-container">
+								<img class="platform-icon" src="media/img/img_ios.png" alt="ios">
+								<img class="platform-icon" src="media/img/img_steam.png" alt="pc">
+								<span class="playstation">PS5</span> 
+								<span class="playstation">PS4</span> 
+								<span class="xbox">Xbox One</span> 
+								<span class="xbox">Xbox Series X/S</span> 
+								<img class="platform-icon" src="media/img/img_switch.png" alt="switch">
+							</div>
+						</div>
+					</div>
+        </div>
+				</div>
+			</section>
+		</main>
 
-            </div>
-
-
-        </main>
-        <!-- <footer>
-            <p>Copyright Luke Willis 2023</p>
-        </footer> -->
-    </body>
+		<footer class="footer">
+            
+        </footer>
+	</body>
 </html>

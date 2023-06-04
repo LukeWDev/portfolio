@@ -1,15 +1,37 @@
+:root {
+    --accent-colour: #E63946;
+    --site-colour-01: #fff;
+    --site-colour-02: #1E1E1E;
+
+    --headerHeight: 3.75rem;
+}
 * {
     font-family: JetBrainsMono, monospace;
-    color: #d4d4d4;
+    color: var(--site-colour-01);
+    /* outline: 1px solid red; */
+}
+.playstation {
+    font-family: PlaystationBold, JetBrainsMono, monospace;
+    color: #1565c0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.xbox {
+    font-family: XboxRegular, Cambria;
+    color: #107C10;
+    font-size: 1rem;
+    font-weight: bold;
 }
 .red-accent {
-    color: #E63946;
+    color: var(--accent-colour);
 }
-.main-p {
-    text-align: center;
+.red-accent-bold {
+    color: var(--accent-colour);
+    font-weight: bold;
 }
 body {
-    background-color: #1E1E1E;
+    background-color: var(--site-colour-02);
+    width: 100%;
 }
 body::after {
     position: absolute;
@@ -30,34 +52,31 @@ h2 {
     font-size: 2.25rem;
     text-align: center;
 }
-h4 {
-    font-size: 1.5rem;
-    text-align: center;
-}
-h5 {
-    font-size: 1.2rem;
-    text-align: center;
-}
 p {
-    font-size: rem;
+    font-size: 1rem;
 }
 main {
-    margin: 5rem 5rem;
-}
-/* ---------------HEADER----------------- */
-.header {
-    position: fixed;
-    top: 0;
+    margin: var(--headerHeight) 0;
     width: 100%;
-    height: 3.75rem;
-    font-size: 1.3rem;
-    text-align: center;
-    background-color: transparent;
+    height: calc(100vh - var(--headerHeight));
+}
+.section-title {
+    margin-bottom: 2rem;
+}
+/* ---------------HEADER SECTION----------------- */
+.header {
+    align-items: center;
+    background-color: var(--site-colour-02);
     display: flex;
     flex-direction: row; 
     flex-wrap: nowrap;
+    font-size: 1.3rem;
+    height: var(--headerHeight);
     justify-content: space-between;
-    align-items: center;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
     z-index: 1000;
 }
 .header .header-name {
@@ -84,7 +103,7 @@ main {
     padding: 0px 10px;
 }
 .header .header-menu ul li a:hover {
-    color: #E63946;
+    color: var(--accent-colour);
 }
 .header .header-socials {
     /* background-color:darkcyan; */
@@ -116,4 +135,204 @@ main {
 .header-socials-github:hover {
     background-image: url(../media/img/img_github_hovered.png);
 }
-/* -------------------------------------- */
+/* ---------------HERO SECTION----------------- */
+
+.section-hero {
+    --section-title-spacing: 1rem;
+    padding: 4rem 0rem;
+    /* background-color: aquamarine; */
+    height: calc(100vh - var(--headerHeight));
+}
+.section-hero .section-title-name {
+    text-align: center;
+}
+.section-hero .section-hero-line {
+    height: 0.15rem;
+    width: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: var(--section-title-spacing) auto;
+    background-color: var(--site-colour-01);
+}
+.section-hero .section-hero-role {
+    text-align: center;
+}
+.section-hero .section-hero-description {
+    text-align: center;
+    margin: calc(var(--section-title-spacing) + 2rem) 20vw 4rem 20vw;
+    flex-basis: 28rem;
+}
+.hero-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+.self-img-border {
+    width: 250px;
+    height: 250px;
+    background-color: var(--accent-colour);
+    border-radius: 50%;
+}
+.self-img {
+    padding: 0.1rem;
+}
+.hero-skills {
+    flex-basis: 21rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3rem;
+}
+.hero-skills p {
+    font-size: 1.1rem;
+}
+.skill-bar {
+    --border-width: 0.1rem;
+    border: var(--border-width) solid var(--site-colour-01);
+    height: 1.25rem;
+    width: calc(100%-calc(2 x var(--border-width)));
+}
+.skill-bar-fill {
+    height: 100%;
+    background-color: var(--accent-colour);
+}
+.skill-wwise {
+    width: 85%;
+}
+.skill-cpp {
+    width: 50%;
+}
+.skill-lua {
+    width: 70%;
+}
+.skill-py {
+    width: 40%;
+}
+.skill-p4 {
+    width: 75%;
+}
+.skill-jira {
+    width: 80%;
+}
+.skill-ue {
+    width: 90%;
+}
+.skill-git {
+    width: 30%;
+}
+
+
+/* ---------------SHOWREEl SECTION----------------- */
+
+.section-showreel {
+    height: 75%;
+    margin: 2rem 0;
+}
+
+.hero-showreel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ---------------PROJECT SECTION----------------- */
+
+.section-projects {
+    /* background-color:cyan; */
+    width: 100%;
+    height: 100%;
+    padding: 3.75rem 0rem;
+}
+.section-projects-group {
+    /* background-color:orange; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    justify-items: center;
+    grid-gap: 1rem;
+}
+.section-projects-group-item {
+    align-items: center;
+    /* background-color:blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.section-projects-group-item-img {
+    background-color:green;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50%;
+    object-fit: cover;
+    width: 100%;
+}
+.section-projects-group-item-info {
+    align-items: center;
+    background-color:var(--site-colour-01);
+    color: var(--site-colour-02);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    padding: 1rem;
+    text-align: left;
+    width: 100%;
+}
+.section-projects-group-item-info div {
+    color: var(--site-colour-02);
+}
+.section-projects-group .section-projects-group-item-info li{
+    padding-left: 3rem;
+    color: var(--site-colour-02);
+}
+.platform-icon {
+    width: 2rem;
+}
+.platform-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+.section-projects-group-item-info2 {
+    align-items: center;
+    background-color:var(--site-colour-01);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+}
+.project-title {
+    color: var(--site-colour-02);
+    font-size: 2rem;
+    font-weight: bold;
+}
+.project-dev {
+    color: var(--accent-colour);
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.project-role {
+    color: var(--site-colour-02);
+    font-size: 1.4rem;
+    margin-top: 0.2rem;
+}
+.project-info {
+    padding: 1.5rem 0;
+    color: var(--site-colour-02);
+    font-size: 1rem;
+    flex-basis: 100px;
+}
+
+/* ---------------FOOTER SECTION----------------- */
+
+.footer{
+    height: 100%;
+    background-color: #107C10;
+}

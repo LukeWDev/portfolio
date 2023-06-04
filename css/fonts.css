@@ -18,3 +18,11 @@
     src: url(../fonts/JetBrainsMono-SemiBold.ttf);
     font-weight: bold;
 }
+@font-face {
+    font-family: PlaystationBold;
+    src: url(../fonts/Playstation-Bold.ttf);
+}
+@font-face {
+    font-family: XboxRegular;
+    src: url(../fonts/Xbox.ttf);
+}
