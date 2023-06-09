@@ -26,3 +26,7 @@
     font-family: XboxRegular;
     src: url(../fonts/Xbox.ttf);
 }
+@font-face {
+    font-family: Horizon;
+    src: url(../fonts/Horizon.ttf);
+}

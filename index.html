@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Luke Willis</title>
+		<title>Home</title>
 		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/fonts.css" />
@@ -19,9 +19,10 @@
 			<nav class="header-menu">
 				<ul>
 					<li><a href="#home">home</a></li>
-					<li><a href="#showreel">showreel</a></li>
+					<li><a href="#showcase">showcase</a></li>
 					<li><a href="#projects">projects</a></li>
-					<li><a href="contact.html">contact</a></li>
+					<li><a href="#tools">tools</a></li>
+					<li><a href="#contact">contact</a></li>
 				</ul>
 			</nav>
 			<div class="header-socials">
@@ -40,10 +41,26 @@
 		<section class="header-mobile">
 			<nav class="header-menu-mobile">
 				<ul>
-					<li><a href="#home">home</a></li>
-					<li><a href="#showreel">showreel</a></li>
-					<li><a href="#projects">projects</a></li>
-					<li><a href="contact.html">contact</a></li>
+					<li><a class="mobile-btn" href="#home">
+						<div class="mobile-btn-home"></div>
+						</a>
+					</li>
+					<li><a class="mobile-btn" href="#showcase">
+						<div class="mobile-btn-showcase"></div>
+						</a>
+					</li>
+					<li><a class="mobile-btn" href="#projects">
+						<div class="mobile-btn-projects"></div>
+						</a>
+					</li>
+					<li><a class="mobile-btn" href="#tools">
+						<div class="mobile-btn-tools"></div>
+						</a>
+					</li>
+					<li><a class="mobile-btn" href="#contact">
+						<div class="mobile-btn-contact"></div>
+						</a>
+					</li>
 				</ul>
 			</nav>
 		</section>
@@ -66,7 +83,7 @@
 				<div class="hero-about">
 					<div class="hero-contact-container">
 						<img class="self-img" src="media/img/img_luke.png" alt="luke">
-						<a href="contact.html">
+						<a href="#contact">
 							<button class="contact-button">Contact Me</button>
 						</a>
 					</div>
@@ -109,14 +126,101 @@
 										
 			</section>
 
-			<!-- Showreel Section -->
-			<section class="section-showreel" id="showreel">
+			<!-- showcase Section -->
+			<section class="section-showcase" id="showcase">				
+				<h2 class="section-title">technical showcase</h2>
+				<div class="showcase-container">
 
-				<div class="hero-showreel-container">
-					<h2 class="section-title">showreel</h2>
-					<video class="hero-showreel" src="media/vid/vid_placeholder.mp4" controls></video>
+					<div class="showcase-item">
+						<video class="showcase-video" controls>
+							<source src="./media/vid/vid_optimisation.mp4" type="video/mp4">
+							<p> Your browser doesn't support MP4 Videos</p>
+						</video>
+						<div class="showcase-info">
+							<p class="showcase-feature">Dynamic Tick & AkComponent Spawning</p>
+							<p class="showcase-category">Optimisation</p>
+							<p class="showcase-project"><span class="horizon">Horizon Call of the Mountain</span></p>
+							<p class="showcase-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</p>
+							
+						</div>
+						
+					</div>
+
+					<div class="showcase-item">
+						<video class="showcase-video" controls>
+							<source src="./media/vid/vid_placeholder.mp4" type="video/mp4">
+							<p> Your browser doesn't support MP4 Videos</p>
+						</video>
+						<div class="showcase-info">
+							<p class="showcase-feature">Combat Stem Ducking</p>
+							<p class="showcase-category">Music System</p>
+							<p class="showcase-project"><span class="horizon">Horizon Call of the Mountain</span></p>
+							<p class="showcase-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</p>
+						</div>
+						
+					</div>
+
+					<div class="showcase-item">
+						<video class="showcase-video" controls>
+							<source src="./media/vid/vid_placeholder.mp4" type="video/mp4">
+							<p> Your browser doesn't support MP4 Videos</p>
+						</video>
+						<div class="showcase-info">
+							<p class="showcase-feature">Ambient Music</p>
+							<p class="showcase-category">Music System</p>
+							<p class="showcase-project"><span class="horizon">Horizon Call of the Mountain</span></p>
+							<p class="showcase-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</p>
+							
+						</div>
+						
+					</div>
+
+					<div class="showcase-item">
+						<video class="showcase-video" controls>
+							<source src="./media/vid/vid_hapt.mp4" type="video/mp4">
+							<p> Your browser doesn't support MP4 Videos</p>
+						</video>
+						<div class="showcase-info">
+							<p class="showcase-feature">Independent Hand Routing</p>
+							<p class="showcase-category">Haptics System</p>
+							<p class="showcase-project"><span class="horizon">Horizon Call of the Mountain</span></p>
+							<p class="showcase-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</p>
+							
+						</div>
+						
+					</div>
+
+					<div class="showcase-item">
+						<video class="showcase-video" controls>
+							<source src="./media/vid/vid_wind.mp4" type="video/mp4">
+							<p> Your browser doesn't support MP4 Videos</p>
+						</video>
+						<div class="showcase-info">
+							<p class="showcase-feature">Dynamic Wind System</p>
+							<p class="showcase-category">Ambience System</p>
+							<p class="showcase-project"><span class="horizon">Horizon Call of the Mountain</span></p>
+							<p class="showcase-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</p>
+							
+						</div>
+						
+					</div>
+					
 				</div>
-
 			</section>
 
 			<!-- Projects Section -->
@@ -175,9 +279,7 @@
 									src="media/img/img_reaper.png"
 									alt="unreal engine 4"
 								/>
-								<p class="project-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-									Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								<p class="project-info">Returnal Ascension expands 
 									<br>
 									<br>
 									Responsibilities included extra <span class="red-accent-bold">Ambisonic</span> design, and <span class="red-accent-bold">Ambient Spot</span>
@@ -274,6 +376,17 @@
         		</div>
 			</div>
 		</section>
+
+		<!-- Tools Section -->
+		<section class="section-tools" id="tools">
+			<h2 class="section-title">tools</h2>
+		</section>
+
+		<!-- Contact Section -->
+		<section class="section-contact" id="contact">
+			<h2 class="section-title">contact</h2>
+		</section>
+
 		</main>
 		<!-- Footer Section -->
 		<footer class="footer">
