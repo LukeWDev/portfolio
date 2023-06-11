@@ -73,7 +73,7 @@
 				</h1>
 				<div class="section-hero-line"></div>
 				<h2 class="section-hero-role">
-					technical.<span class="red-accent-animation" data-text="sound.designer">sound.designer</span>
+					technical.<span class="red-accent">sound.designer</span>
 				</h2>
 				<p class="section-hero-description">
 					Based in Leeds, UK, with 3+ years experience in the gaming industry
@@ -84,42 +84,42 @@
 					<div class="hero-contact-container">
 						<img class="self-img" src="media/img/img_luke.png" alt="luke">
 						<a href="#contact">
-							<button class="contact-button" type="button">Contact Me</button>
+							<button class="contact-button" type="button"><span>Contact Me</span></button>
 						</a>
 					</div>
 					
 					<div class="hero-skills">
 						<p>Wwise</p>
 						<div class="skill-bar">
-							<div class="skill-bar-fill skill-wwise"></div>
+							<div class="skill-bar-fill" per="85%" style="max-width: 80%"></div>
 						</div>
 						<p>C++</p>
 						<div class="skill-bar">
-							<div class="skill-bar-fill skill-cpp"></div>
+							<div class="skill-bar-fill" per="50%" style="max-width: 50%;"></div>
 						</div>
 						<p>Lua</p>
 						<div class="skill-bar">
-							<div class="skill-bar-fill skill-lua"></div>
+							<div class="skill-bar-fill" per="70%" style="max-width: 70%;"></div>
 						</div>
 						<p>Python</p>
 						<div class="skill-bar">
-							<div class="skill-bar-fill skill-py"></div>
+							<div class="skill-bar-fill" per="40%" style="max-width: 40%;"></div>
 						</div>
 						<p>Perforce</p>
 						<div class="skill-bar">
-							<div class="skill-bar-fill skill-p4"></div>
+							<div class="skill-bar-fill" per="75%" style="max-width: 75%;"></div>
 						</div>
 						<p>Git</p>
 						<div class="skill-bar">
-							<div class="skill-bar-fill skill-git"></div>
+							<div class="skill-bar-fill" per="40%" style="max-width: 40%;"></div>
 						</div>
 						<p>Unreal Engine Blueprints</p>
 						<div class="skill-bar">
-							<div class="skill-bar-fill skill-ue"></div>
+							<div class="skill-bar-fill" per="90%" style="max-width: 90%;"></div>
 						</div>
 						<p>HTML & CSS</p>
 						<div class="skill-bar">
-							<div class="skill-bar-fill skill-web"></div>
+							<div class="skill-bar-fill" per="20%" style="max-width: 20%;"></div>
 						</div>
 					</div>
 				</div>
@@ -137,12 +137,16 @@
 							<p> Your browser doesn't support MP4 Videos</p>
 						</video>
 						<div class="showcase-info">
-							<p class="showcase-feature">Dynamic Tick & AkComponent Spawning</p>
-							<p class="showcase-category">Optimisation</p>
-							<p class="showcase-project"><span class="horizon">Horizon Call of the Mountain</span></p>
-							<p class="showcase-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							<div class="showcase-titles">
+								<p class="showcase-feature">Dynamic Tick & AkComponent Spawning</p>
+								<p class="showcase-category">Optimisation</p>
+								<p class="showcase-project"><span class="horizon">Horizon Call of the Mountain</span></p>
+							</div>
+							<p class="showcase-description">In order to minimise the audio footprint, a few key systems were implemented to reduce the number of updates that occur every frame, and minimise the number of AkComponents that are present in the game world. 
+								<br><br>
+								A dynamic tick system that was implemented into the base audio class allowed us to adjust the number of intervals and the spacing between each interval, in order to retain accurate updates for responsive gameplay, whilst reducing necessary updates.
+								<br><br>
+								To reduce the number of AkComponents that are present in the game world, a dynamic spawning system was used to destroy AkComponents that were outside of the attenuation radius; with the option of adding a delay before destruction to reduce spamming if the player walks in and out of the radius.
 							</p>
 							
 						</div>
@@ -155,12 +159,14 @@
 							<p> Your browser doesn't support MP4 Videos</p>
 						</video>
 						<div class="showcase-info">
-							<p class="showcase-feature">Combat Stem Ducking</p>
-							<p class="showcase-category">Music System</p>
-							<p class="showcase-project"><span class="horizon">Horizon Call of the Mountain</span></p>
-							<p class="showcase-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							<div class="showcase-titles">
+								<p class="showcase-feature">Combat Stem Ducking</p>
+								<p class="showcase-category">Music System</p>
+								<p class="showcase-project"><span class="horizon">Horizon Call of the Mountain</span></p>
+							</div>
+							<p class="showcase-description">To preserve the sensation of large, formidable machines in a first person perspective, it was crucial to convey the weight of machine attacks during combat. To help achieve this, a stem ducking system was implemented into the music system which allowed per stem EQ and volume control during machine attacks.
+								<br><br>
+								By employing this system, we were able to attenuate clashing low-end frequencies in stems such as low percussion or low synths. This allowed us to maintain the integrity of the overall score while simultaneously upholding the intensity of the combat experience.
 							</p>
 						</div>
 						
@@ -172,12 +178,19 @@
 							<p> Your browser doesn't support MP4 Videos</p>
 						</video>
 						<div class="showcase-info">
-							<p class="showcase-feature">Ambient Music</p>
-							<p class="showcase-category">Music System</p>
-							<p class="showcase-project"><span class="horizon">Horizon Call of the Mountain</span></p>
-							<p class="showcase-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							<div class="showcase-titles">
+								<p class="showcase-feature">Ambient Music</p>
+								<p class="showcase-category">Music System</p>
+								<p class="showcase-project"><span class="horizon">Horizon Call of the Mountain</span></p>
+							</div>
+							<p class="showcase-description">While the gameplay path follows a linear trajectory, it offers immersive areas to explore, teeming with rich lore, physics-based collectables, interactive instruments, and breathtaking vistas. 
+								It became evident that these design elements, combined with the physically demanding nature of VR climbing and the need for designated rest points, necessitated additional ambient music tracks that adapt to the player's location and duration of stay in each specific area.
+								<br><br>
+								To address this, an advanced system of ambient zones was implemented throughout the game world. 
+								These zones can be strategically positioned and configured to trigger different music tracks based on varying time intervals, incorporating the option of random offsets. 
+								These tracks are played at a lower priority compared to story music, serving as supplementary accompaniment for non-story interactions.
+								<br><br>
+								This intricate music system enhances the player's engagement by seamlessly blending with the environment, creating a cohesive audio backdrop that aligns with the unfolding gameplay experience.
 							</p>
 							
 						</div>
@@ -190,12 +203,17 @@
 							<p> Your browser doesn't support MP4 Videos</p>
 						</video>
 						<div class="showcase-info">
-							<p class="showcase-feature">Independent Hand Routing</p>
-							<p class="showcase-category">Haptics System</p>
-							<p class="showcase-project"><span class="horizon">Horizon Call of the Mountain</span></p>
-							<p class="showcase-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							<div class="showcase-titles">
+								<p class="showcase-feature">Independent Hand Routing</p>
+								<p class="showcase-category">Haptics System</p>
+								<p class="showcase-project"><span class="horizon">Horizon Call of the Mountain</span></p>
+							</div>
+							<p class="showcase-description">Among the notable technical hurdles, one of the most significant involved integrating haptics into the cutting-edge VR2 controllers. 
+								To address this challenge, a system was implemented to facilitate hand haptic routing. This ensured that player interactions were distinctly felt, with the haptic feedback being responsive to the specific connecting hand(s). 
+								Additionally, in-world occurrences such as explosions or machine attacks were dynamically conveyed based on the proximity of each hand.
+								<br><br>
+								This system is used across multiple pillars of the game, including physics interactions, reverberations from gong impacts, the sensation of being in close proximity to a campfire, thrilling combat events, and countless other instances.
+								
 							</p>
 							
 						</div>
@@ -208,12 +226,16 @@
 							<p> Your browser doesn't support MP4 Videos</p>
 						</video>
 						<div class="showcase-info">
-							<p class="showcase-feature">Dynamic Wind System</p>
-							<p class="showcase-category">Ambience System</p>
-							<p class="showcase-project"><span class="horizon">Horizon Call of the Mountain</span></p>
-							<p class="showcase-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							<div class="showcase-titles">
+								<p class="showcase-feature">Dynamic Wind System</p>
+								<p class="showcase-category">Ambience System</p>
+								<p class="showcase-project"><span class="horizon">Horizon Call of the Mountain</span></p>
+							</div>
+							<p class="showcase-description">In order to immerse players fully within the captivating and lively world of Horizon, harnessing the capabilities of PS5's 3D audio was paramount. 
+								A pivotal aspect of achieving this goal involved implementing a dynamic wind system that envelops the player, intensifying as they ascend towering peaks.
+								<br><br>
+								This system employs the generation of wind emitters that dynamically spawn and traverse a predefined spline, adhering to carefully calibrated parameters such as speed, direction, and distant offset settings. 
+								This creates a rich, multi-layered, 3D experience that seamlessly adapts to the player's movements.
 							</p>
 							
 						</div>
@@ -279,7 +301,9 @@
 									src="media/img/img_reaper.png"
 									alt="unreal engine 4"
 								/>
-								<p class="project-info">Returnal Ascension expands 
+								<p class="project-info">Returnal Ascension is a third-person roguelike shooter that combines elements of science fiction, action, and psychological horror. 
+									It features fast-paced combat, challenging enemies and dynamically chaning environments. 
+									This project showcases 3rd order ambisonic design to create rich, immersive environments.
 									<br>
 									<br>
 									Responsibilities included extra <span class="red-accent-bold">Ambisonic</span> design, and <span class="red-accent-bold">Ambient Spot</span>
@@ -313,13 +337,11 @@
 									src="media/img/img_wwise.png"
 									alt="wwise"
 								/>
-								<p class="project-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-									Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								<p class="project-info">Originally released on Apple Arcade, adventure platformer Little Orpheus follows Ivan Ivanovich through his fantastical expedition to the cetner of the Earth. 
+									This project showcases upmixing and optimising audio for multiple platforms, from Switch to PS5.
 									<br>
 									<br>
-									Responsibilities included extra <span class="red-accent-bold">Ambisonic</span> design, and <span class="red-accent-bold">Ambient Spot</span>
-									design for various environments.
+									Responsibilities included <span class="red-accent-bold">5.1 Upmixing</span>, <span class="red-accent-bold">Optimising</span> for multiple release platforms, and additional <span class="red-accent-bold">Sound Design</span>.</span>
 									
 							</div>
 							<div class="platform-icon-container">
@@ -353,14 +375,11 @@
 									src="media/img/img_wwise.png"
 									alt="wwise"
 								/>
-								<p class="project-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-									Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								<p class="project-info">A sequel to the classic 1994 adventure game Beneath a Steel Sky, Beyond a Steel Sky is an adventure puzzle game based in a futuristic dystopian world. 
+									This project showcases technical sound design and optimisation for multiple platforms.
 									<br>
 									<br>
-									Responsibilities included extra <span class="red-accent-bold">Ambisonic</span> design, and <span class="red-accent-bold">Ambient Spot</span>
-									design for various environments.
-									
+									Responsibilities included <span class="red-accent-bold">Sound Design</span>, <span class="red-accent-bold">Implementation</span>, <span class="red-accent-bold">Optimisation</span> and <span class="red-accent-bold">Bug Fixing</span>.
 							</div>
 							<div class="platform-icon-container">
 								<img class="platform-icon" src="media/img/img_ios.png" alt="ios">
@@ -370,6 +389,37 @@
 								<span class="xbox">Xbox One</span> 
 								<span class="xbox">Xbox Series X/S</span> 
 								<img class="platform-icon" src="media/img/img_switch.png" alt="switch">
+							</div>
+						</div>
+					</div>
+
+					<div class="section-projects-group-item"> <!--Baldurs Gate III-->
+						<img
+							class="section-projects-group-item-img"
+							src="media/img/img_baldurs.jpg"
+							alt="baldurs gate 3"
+						/>
+						<div class="section-projects-group-item-info">
+							<div>
+								<p class="project-title">Baldur's Gate 3</p>
+								<p class="project-dev">Larian Studios</p>
+								<p class="project-role">Voice Editor</p>
+								<img
+									class="img-engine"
+									src="media/img/img_reaper.png"
+									alt="reaper"
+								/>
+								<p class="project-info">Baldur's Gate 3 is 
+									<br>
+									<br>
+									Responsibilities included <span class="red-accent-bold">Motion Capture Editing</span> and <span class="red-accent-bold">Voice Over Editing</span>.
+							</div>
+							<div class="platform-icon-container">
+								<img class="platform-icon" src="media/img/img_ios.png" alt="mac">
+								<img class="platform-icon" src="media/img/img_steam.png" alt="pc">
+								<span class="playstation">PS5</span> 
+								<span class="xbox">Xbox One</span> 
+								<span class="xbox">Xbox Series X/S</span> 
 							</div>
 						</div>
 					</div>
