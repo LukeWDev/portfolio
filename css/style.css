@@ -548,11 +548,12 @@ main {
 }
 .tools-info {
     font-size: 1rem;
-    padding: 2rem 6rem;
+    padding: 1rem 6rem;
     text-align: center;
 }
 .tools-item a .contact-button {
     font-size: 1.2rem;
+    margin: 1rem 0;
 }
 
 
