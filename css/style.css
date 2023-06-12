@@ -156,7 +156,8 @@ main {
     background-color: var(--site-colour-02);
     border-radius: 10px;
     border: 2px var(--site-colour-01) solid;
-    min-width: 250px;
+    min-width: 350px;
+    width: 75%;
 }
 .header-menu-mobile ul {
     display: flex;
@@ -419,13 +420,13 @@ main {
 }
 .showcase-feature {
     color: var(--site-colour-02);
-    font-size: 1.6rem;
+    font-size: 2.2rem;
     font-weight: bold;
     text-align: center;
     padding: 1rem 1rem 0 1rem;
 }
 .showcase-category {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: var(--accent-colour);
     font-style: italic;
 }
@@ -523,6 +524,64 @@ main {
     flex-basis: 100px;
 }
 
+/* ---------------TOOLS SECTION----------------- */
+
+.section-tools {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    padding-bottom: 3rem;
+}
+.tools-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.5rem;
+}
+.tools-status {
+    color: var(--accent-colour);
+    font-style: italic;
+    font-size: 1.3rem;
+}
+.tools-info {
+    font-size: 1rem;
+    padding: 2rem 6rem;
+    text-align: center;
+}
+.tools-item a .contact-button {
+    font-size: 1.2rem;
+}
+
+
+/* ---------------CONTACT SECTION----------------- */
+
+.section-contact {
+    
+}
+
+/* ---------------TO TOP SECTION----------------- */
+.btn-top-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    bottom: 1rem;
+    right: -45%;
+}
+.btn-top {
+    background-image: url(../media/img/img_arrow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    background-color: var(--accent-colour);
+}
+
 /* ---------------FOOTER SECTION----------------- */
 
 .footer{
@@ -566,6 +625,9 @@ main {
     }
     .section-projects-group {
         grid-template-columns: 1fr;
+    }
+    .btn-top-container {
+        display: none;
     }
   
 }
