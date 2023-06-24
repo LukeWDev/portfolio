@@ -78,47 +78,52 @@ main {
     position: fixed;
     text-align: center;
     top: 0;
-    width: 100%;
     z-index: 1000;
+    column-gap: 1rem;
+    width: 100%;
+    justify-content: space-between;
 }
 .header-name {
-    flex-basis: 20%;
     text-align: left;
-    margin-left: 2.5rem;
-    padding: 10px 0;
+    padding-left: 2rem;
 }
 .header-name p {
     font-size: 1.3rem;
 }
 .header-menu {
-    flex-basis: 60%;
     padding: 10px 0;
 }
 .header-menu ul {
     list-style: none;
-    padding: 10px 0;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
 }
 .header-menu ul li {
     display: inline;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .header-menu ul li a {
-    padding: 0px 10px;
     transition: all 0.3s ease 0s;
+    font-size: 1.5rem;
 }
 .header-menu ul li a:hover {
     color: var(--accent-colour);
-    transform: translateY(10px);
 }
 .header-socials {
     column-gap: 5px;
     display: flex;
-    flex-basis: 20%;
     justify-content: flex-end;
-    margin-right: 2.5rem;
+    padding-right: 2rem;
 }
 .header-socials-linkedin {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     background-image: url(../media/img/img_linkedin.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -128,8 +133,8 @@ main {
     background-image: url(../media/img/img_linkedin_hovered.png);
 }
 .header-socials-github {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     background-image: url(../media/img/img_github.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -222,8 +227,9 @@ main {
 .section-hero {
     --section-title-spacing: 1rem;
     padding: 4rem 0rem;
-    /* background-color: aquamarine; */
+    position: relative;
 }
+
 .section-hero .section-title-name {
     text-align: center;
 }
@@ -263,59 +269,6 @@ main {
     display: flex;
     justify-content: center;
    
-}
-.contact-button {
-    line-height: 50px;
-    height: 75px;
-    text-align: center;
-    width: 250px;
-    cursor: pointer;
-    color: #FFF;
-    transition: all 0.3s;
-    position: relative;
-
-}
-.contact-button span {
-    transition: all 0.3s;
-    font-size: 1.3rem;
-}
-.contact-button::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0;
-    transition: all 0.3s;
-    border-top: 2px solid var(--accent-colour);
-    border-bottom: 2px solid var(--accent-colour);
-    transform: scale(0.1, 1);
-}
-.contact-button:hover span {
-    letter-spacing: 2px;
-}
-.contact-button:hover::before {
-    opacity: 1; 
-    transform: scale(1, 1); 
-}
-.contact-button::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    transition: all 0.3s;
-    background-color: rgba(255,255,255,0.1);
-    border: 1px solid var;
-    /* background-color: rgba(255,255,255,0.1); */
-}
-.contact-button:hover::after {
-    opacity: 0; 
-    transform: scale(0.1, 1);
 }
 .self-img {
     padding: 0.1rem;
@@ -371,7 +324,26 @@ main {
         opacity: 100%;
     }
 }
+.blink {
+    animation: textLine 1.2s ease-in-out infinite;
+    color: var(--site-colour-01);
+    background-color: var(--site-colour-01);
+    width: 1.5px;
+    margin: 0 3px;
+}
 
+@keyframes textLine {
+   0% {
+    opacity: 0;
+   }
+   1%, 50%{
+    opacity: 100%;
+   }
+   51%, 100%{
+    opacity: 0;
+   }
+  
+}
 
 /* ---------------SHOWCASE SECTION----------------- */
 
@@ -556,33 +528,6 @@ main {
     margin: 1rem 0;
 }
 
-
-/* ---------------CONTACT SECTION----------------- */
-
-.section-contact {
-    
-}
-
-/* ---------------TO TOP SECTION----------------- */
-.btn-top-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    position: fixed;
-    bottom: 1rem;
-    right: -45%;
-}
-.btn-top {
-    background-image: url(../media/img/img_arrow.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 50px;
-    width: 50px;
-    border-radius: 10px;
-    background-color: var(--accent-colour);
-}
-
 /* ---------------FOOTER SECTION----------------- */
 
 .footer{
@@ -650,3 +595,4 @@ main {
         grid-template-columns: 1fr;
     }
 }
+
