@@ -67,6 +67,10 @@ main {
     margin-bottom: 2rem;
 }
 /* ---------------HEADER SECTION----------------- */
+
+.home {
+    padding-bottom: 3rem;
+}
 .header {
     align-items: center;
     background-color: var(--site-colour-02);
@@ -226,44 +230,109 @@ main {
 
 .section-hero {
     --section-title-spacing: 1rem;
-    padding: 4rem 0rem;
+    padding-bottom: 3rem;
     position: relative;
 }
-
-.section-hero .section-title-name {
-    text-align: center;
-}
-.section-hero-role {
+.name-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
 }
-.section-hero .section-hero-line {
+.name {
+    font-size: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: min-content;
+}
+
+.name-line {
+    display: flex;
+    /* width: 50%; */
+}
+.title-line {
     align-items: center;
     background-color: var(--site-colour-01);
     display: flex;
     height: 0.15rem;
     justify-content: center;
     margin: var(--section-title-spacing) auto;
-    width: 40%;
+    position: relative;
+    width: 100%;
 }
-.section-hero .section-hero-description {
+.title-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.title-line::before {
+    background: var(--site-colour-02);
+    animation: lineDraw 1s 1s ease forwards;
+}
+
+@keyframes lineDraw {
+    to {
+        left: 100%;
+    }
+}
+.typewriter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.job-role {
+    --typewriterLength: 24;
+    --typewriterSpeed: 3s;
+    --typewriterInitDelay: 2.3s;
+    --typewriterPostDelay: 5s;
+    --typewriterBlinkSpeed: 1.2s;
+    display: flex;
+    position: relative;
+    justify-self: center;
+}
+.job-role::before,
+.job-role::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.job-role::before {
+    background: var(--site-colour-02);
+    animation: typewriter var(--typewriterSpeed) var(--typewriterInitDelay) steps(var(--typewriterLength)) forwards;
+}
+.job-role::after {
+    width: 2px;
+    background: var(--site-colour-01);
+    animation: 
+        typewriter var(--typewriterSpeed) var(--typewriterInitDelay) steps(var(--typewriterLength)) forwards,
+        textLine var(--typewriterBlinkSpeed) calc(var(--typewriterSpeed) + var(--typewriterInitDelay)) ease-in-out infinite,
+        textLine var(--typewriterBlinkSpeed) ease-in-out;
+}
+@keyframes typewriter {
+    to { 
+        left: 100%;
+    }
+}
+
+.description {
     text-align: center;
     margin: calc(var(--section-title-spacing) + 2rem) 20vw 4rem 20vw;
     flex-basis: 28rem;
 }
-.hero-about {
+.about {
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 5rem;
-}
-.hero-contact-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 2rem;
 }
 .hero-contact-container a {
     display: flex;
@@ -273,14 +342,14 @@ main {
 .self-img {
     padding: 0.1rem;
 }
-.hero-skills {
+.skills {
     flex-basis: 21rem;
     display: flex;
     flex-direction: column;
     row-gap: 0.3rem;
     gap: 10px;
 }
-.hero-skills p {
+.skills p {
     font-size: 1.1rem;
 
 }
@@ -418,7 +487,7 @@ main {
 /* ---------------PROJECT SECTION----------------- */
 
 .section-projects {
-    padding: 3.75rem 0;
+    padding-bottom: 3.75rem;
 }
 .section-projects-group {
     display: grid;
@@ -512,6 +581,11 @@ main {
     justify-content: center;
     align-items: center;
     row-gap: 0.5rem;
+    background-color: var(--site-colour-01);
+    padding: 1rem 0;
+}
+.tools-name {
+    color: var(--site-colour-02);
 }
 .tools-status {
     color: var(--accent-colour);
@@ -522,10 +596,25 @@ main {
     font-size: 1rem;
     padding: 1rem 6rem;
     text-align: center;
+    color: var(--site-colour-02);
 }
-.tools-item a .contact-button {
+.tools-link {
+    background-color: #1565c0;
+    border: solid 2px #107C10;
+    border-radius: 10px;
+}
+.sequence-github {
+    color: var(--site-colour-02);
     font-size: 1.2rem;
-    margin: 1rem 0;
+    transition: all 0.3s ease 0s;
+    font-style: italic;
+    padding: 1px;
+    
+}
+
+.sequence-github:hover {
+    color: var(--accent-colour);
+    transform: translateY(-5px);
 }
 
 /* ---------------FOOTER SECTION----------------- */
@@ -561,7 +650,7 @@ main {
         margin: 0;
         flex-basis: 0;
     }
-    .hero-about {
+    .about {
         flex-direction: column;
         row-gap: 3rem;
         column-gap: 0;
@@ -575,6 +664,15 @@ main {
     .btn-top-container {
         display: none;
     }
+    .job-role::before {
+        animation: none;
+        background-color: transparent;
+    }
+    .job-role::after {
+        animation: none;
+        background: transparent;
+    }
+    
   
 }
 @media all and (max-width: 1312px){
@@ -593,6 +691,11 @@ main {
     }
     .showcase-container {
         grid-template-columns: 1fr;
+    }
+}
+@media all and (max-width: 550px) {
+    .job-role {
+        flex-direction: column;
     }
 }
 

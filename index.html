@@ -10,7 +10,8 @@
 		<link rel="stylesheet" href="css/fonts.css" />
 		<link rel="icon" type="image/x-icon" href="./media/svg/svg_wave.svg">
 	</head>
-	<body  id="home">
+	<div class="home" id="home"></div>
+	<body>
 		<!-- Header Section -->
 		<header class="header">
 
@@ -19,8 +20,7 @@
 			</div>
 			<nav class="header-menu">
 				<ul>
-					<li>
-<a href="#home">home</a></li>
+					<li><a href="#home">home</a></li>
 					<li><a href="#showcase">showcase</a></li>
 					<li><a href="#projects">projects</a></li>
 					<li><a href="#tools">tools</a></li>
@@ -66,24 +66,27 @@
 		<main>
 			<!-- Hero Section -->
 			<section class="section-hero">
-				<h1 class="section-hero-name">
-					luke.<span class="red-accent">willis</span>
-				</h1>
-				<div class="section-hero-line"></div>
-				<h2 class="section-hero-role">
-					technical.<span class="red-accent">sound.designer</span><span class="blink"></span>
-				</h2>
-				<p class="section-hero-description">
+				<div class="name-container">
+					<h1 class="name">
+						<div class="name-line">luke.<span class="red-accent">willis</span></div>
+						
+						<div class="title-line"></div>
+					</h1>
+				</div>
+				<div class="typewriter-container">
+					<h2 class="job-role">
+						technical.<span class="red-accent">sound.designer</span>
+					</h2>
+				</div>
+				<p class="description">
 					Based in Leeds, UK, with 3+ years experience in the gaming industry
 					working on multiple genres of games, in different game engines, with different development teams.
 					Currently working at Pitstop Productions.
 				</p>
-				<div class="hero-about">
-					<div class="hero-contact-container">
-						<img class="self-img" src="media/img/img_luke.png" alt="luke">
-					</div>
+				<div class="about">
 					
-					<div class="hero-skills">
+					<img class="self-img" src="media/img/img_luke.png" alt="luke">
+					<div class="skills">
 						<p>Wwise</p>
 						<div class="skill-bar">
 							<div class="skill-bar-fill" per="85%" style="max-width: 80%"></div>
@@ -396,6 +399,7 @@
 			<h2 class="section-title">Tools</h2>
 			<div class="tools-container">
 				<div class="tools-item">
+					<img class="tools-img" src="./media/gifs/gif_sequence.gif" alt="ReaSequence">
 					<div class="tools-name">
 						ReaSequence
 					</div>
@@ -403,14 +407,13 @@
 						In Progress
 					</div>
 					<div class="tools-info">
-						Tool that intends to make previewing designed sounds easier. 
+						Tool that intends to make pre-viewing designed sounds easier. 
 						<br>
 						Currently planned features include: playback queue, playback delays, random playback.
 					</div>
-					<img class="tools-img" src="./media/gifs/gif_sequence.gif" alt="ReaSequence">
 					
-					<a href="https://github.com/LukeWDev/ReaSequence" target="_blank" title="ReaSequence Github">
-						<button class="contact-button" type="button">View on GitHub</button>
+					<a class="tools-link" href="https://github.com/LukeWDev/LxSequence" target="_blank" title="LxSequence Github">
+						<button class="sequence-github" type="button">View on GitHub</button>
 					</a>
 				</div>
 			</div>
