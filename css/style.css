@@ -5,6 +5,13 @@
 
     --headerHeight: 3.75rem;
     scroll-behavior: smooth;
+
+    --barFillDuration: 1.5s;
+    --barTextFade: 1s;
+    --barTextDelay: 1s;
+
+    --lineSpeed: 1.5s;
+    --lineDelay: 1s;
 }
 * {
     font-family: JetBrainsMono, monospace;
@@ -249,7 +256,6 @@ main {
 
 .name-line {
     display: flex;
-    /* width: 50%; */
 }
 .title-line {
     align-items: center;
@@ -271,7 +277,7 @@ main {
 }
 .title-line::before {
     background: var(--site-colour-02);
-    animation: lineDraw 1s 1s ease forwards;
+    animation: lineDraw var(--lineSpeed) var(--lineDelay) ease forwards;
 }
 
 @keyframes lineDraw {
@@ -363,7 +369,8 @@ main {
     background: var(--accent-colour);
     border-radius: 3px;
     position: relative;
-    animation: fillBars 2s ease-in 1;
+    width: 0%;
+    animation: fillBars var(--barFillDuration) var(--lineDelay) ease forwards;
 }
 .skill-bar-fill::before {
     content: attr(per);
@@ -374,13 +381,10 @@ main {
     top: 0;
     right: 17px;
     transform: translateX(50%);
-    animation: numbersFade 1s linear 2s 1 forwards;
+    animation: numbersFade var(--barTextFade) ease calc(var(--lineDelay) + var(--barTextDelay)) forwards;
     opacity: 0;
 }
 @keyframes fillBars {
-    from {
-        width: 0;
-    }
     to {
         width: 100%;
     }
