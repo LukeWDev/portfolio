@@ -586,7 +586,7 @@ main {
     align-items: center;
     row-gap: 0.5rem;
     background-color: var(--site-colour-01);
-    padding: 1rem 0;
+    margin: 1rem 0;
 }
 .tools-name {
     color: var(--site-colour-02);
@@ -603,22 +603,21 @@ main {
     color: var(--site-colour-02);
 }
 .tools-link {
-    background-color: #1565c0;
-    border: solid 2px #107C10;
+    border: solid 2px var(--site-colour-02);
     border-radius: 10px;
 }
 .sequence-github {
     color: var(--site-colour-02);
     font-size: 1.2rem;
-    transition: all 0.3s ease 0s;
+    transition: all 0.1s ease 0s;
     font-style: italic;
-    padding: 1px;
+    padding: 10px;
     
 }
 
 .sequence-github:hover {
     color: var(--accent-colour);
-    transform: translateY(-5px);
+    transform: translateY(-2px);
 }
 
 /* ---------------FOOTER SECTION----------------- */
